@@ -1,19 +1,19 @@
-///摘要
-///程式使用C#.NET 2005 编写
-///引用类库OPCDAAuto.dll
-///OPCServer采用KEPWare
-///在windows xp sp2、sp3、windows 2003上测试通过
-///完成于：2008年12月31日
-///测试于：2009年01月05日
+///Summary
+///Program is written in C#.NET 2005
+///reference class library OPCDAAuto.dll
+///OPCServer uses KEPWare
+///Tested on windows xp sp2, sp3, windows 2003
+///Completed on: December 31, 2008
+///Tested on: January 5, 2009
 ///
-///作者：潇洒草
-///Email：zhkai868@163.com
-///QQ：44649029
-/// 
-///如分发，请保留此摘要。
-///鄙视那些拿代码当宝贝的人，鄙视那些你不拿源码换就不稀罕你的人，鄙视那些自私的人。
-///别人看到你的代码，你能死啊？对你有多大威胁啊？强烈鄙视～～～
-///如果你是这样的人，赶紧关了。。偶不欢迎。。
+/// Author: cool grass
+///Email: zhkai868@163.com
+///QQ:44649029
+///
+/// If you distribute, please keep this summary.
+/// Despise those who take the code as a baby, despise those who don’t use the source code to change you, and despise those who are selfish.
+/// Others see your code, can you die? How much threat to you? Strong contempt ~~~
+///If you are such a person, hurry up. . I don't like it. .
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +24,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Collections;
 using OPCAutomation;
-namespace OPC测试通过
+namespace OPCTestPass
 {
     public partial class MainFrom : Form
     {
@@ -54,33 +54,33 @@ namespace OPC测试通过
         /// </summary>
         OPCItem KepItem;
         /// <summary>
-        /// 主机IP
+        /// Host IP
         /// </summary>
         string strHostIP = "";
         /// <summary>
-        /// 主机名称
+        /// Host name
         /// </summary>
         string strHostName = "";
         /// <summary>
-        /// 连接状态
+        /// Connection Status
         /// </summary>
         bool opc_connected = false;
         /// <summary>
-        /// 客户端句柄
+        /// Client handle
         /// </summary>
         int itmHandleClient = 0;
         /// <summary>
-        /// 服务端句柄
+        /// Server handle
         /// </summary>
         int itmHandleServer = 0;
         #endregion
-        #region 方法
+        #region method
         /// <summary>
-        /// 枚举本地OPC服务器
+        /// Enumerate local OPC server
         /// </summary>
         private void GetLocalServer()
         {
-            //获取本地计算机IP,计算机名称
+            //Get local computer IP, computer name
             IPHostEntry IPHost = Dns.Resolve(Environment.MachineName);
             if (IPHost.AddressList.Length > 0)
             {
